@@ -27,7 +27,7 @@ pytest
 
 Should generate an interactive plot in `plot.html` similar to:
 
-[![upset_plotly/example.png][]][CARD:Live Dashboard]
+![](upset_plotly/example.png)
 
 ## Usage
 
