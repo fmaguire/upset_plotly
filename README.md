@@ -25,7 +25,9 @@ Pretty minimal functional test of plot generation:
 pytest
 ```
 
-Should generate an interactive plot in `out.html`
+Should generate an interactive plot in `plot.html` similar to:
+
+[![upset_plotly/example.png][]][CARD:Live Dashboard]
 
 ## Usage
 
@@ -41,6 +43,9 @@ data = upsetplot.generate_counts()
 fig = plot.upset_plotly(data, 'example')
 
 # the resultant fig can then be visualised in dash or just written 
-# to a static or interactive format e.g.
+# to an interactive format e.g.
 fig.write_html('example.html')
+
+# or static image
+fig.write_image("example.png")
 ```
