@@ -16,8 +16,8 @@ def upset_plotly(data: pd.Series, title: str) -> go.Figure:
     upsetplot.from_contents
     """
 
-    # check type doesn't work for from_membership
-    if type(data) != pd.Series or type(data.index) != pd.MultiIndex:
+    # check type work for from_membership or from_contents
+    if type(data) not in [pd.Series, pd.DataFrame] or type(data.index) != pd.MultiIndex:
         raise ValueError("Data is incorrectly formatted, must be a boolean "
                          "multindex a la the output from upsetplot.from_memberships")
 
@@ -47,6 +47,7 @@ def upset_plotly(data: pd.Series, title: str) -> go.Figure:
     else:
         # get number of sets and categories into UpSet class
         upset_data = upsetplot.UpSet(data, sort_by="cardinality")
+
         num_sets, num_categories = upset_data.intersections.reset_index().shape
 
         # if the data is empty
