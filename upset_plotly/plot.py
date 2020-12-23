@@ -250,7 +250,7 @@ def configure_upset_plot_axes(fig: go.Figure, set_intersections: pd.DataFrame,
                       fixedrange=True),
         yaxis4 = dict(showticklabels=False,
                       fixedrange=True,
-                      range=[0, len(set_intersections.index)+0.5])
+                      range=[-0.5, len(set_intersections.index)+0.5])
     )
     )
     return fig
