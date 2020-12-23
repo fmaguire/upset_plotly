@@ -8,13 +8,14 @@ import plotly.graph_objects as go
 
 def upset_plotly(data: pd.Series, title: str) -> go.Figure:
     """
-    Takes a series formatted as per
+    Takes a series formatted as per upsetplot.from_membership or
+    upsetplot.from_contents
     """
 
-    # check type
-    if type(data) != pd.Series or type(data.index) != pd.MultiIndex:
-        raise ValueError("Data is incorrectly formatted, must be a boolean "
-                         "multindex a la the output from upsetplot.from_memberships")
+    # check type doesn't work for from_membership
+    #if type(data) != pd.Series or type(data.index) != pd.MultiIndex:
+    #    raise ValueError("Data is incorrectly formatted, must be a boolean "
+    #                     "multindex a la the output from upsetplot.from_memberships")
 
     # convert to upset data
     data = upsetplot.UpSet(data, sort_by="cardinality")
