@@ -220,8 +220,8 @@ def configure_upset_plot_axes(fig: go.Figure, set_intersections: pd.DataFrame,
         # tidy axes for cardinality plot
         xaxis1 = dict(showticklabels=False,
                       fixedrange=True),
-        yaxis1 = dict(title="Set Count",
-                      fixedrange=True),
+        yaxis1 = dict(title="Set Count"),
+                      #fixedrange=True),
 
         # grid
         xaxis2 = dict(showticklabels=False,
@@ -247,8 +247,8 @@ def configure_upset_plot_axes(fig: go.Figure, set_intersections: pd.DataFrame,
         ),
 
         # category count
-        xaxis4 = dict(title=f"Unique Count of<br>{title}",
-                      fixedrange=True),
+        xaxis4 = dict(title=f"Unique Count of<br>{title}"),
+                      #fixedrange=True),
         yaxis4 = dict(showticklabels=False,
                       fixedrange=True,
                       range=[-0.5, len(set_intersections.index)+0.5])
