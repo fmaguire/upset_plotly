@@ -6,8 +6,8 @@ import plotly.express as px
 import plotly.subplots as sbp
 import plotly.graph_objects as go
 
-MAX_UPSET_CATEGORIES=40
-MAX_UPSET_INTERSECTIONS=25
+MAX_UPSET_CATEGORIES=100
+MAX_UPSET_INTERSECTIONS=50
 
 
 def upset_plotly(data: pd.Series, title: str) -> go.Figure:
